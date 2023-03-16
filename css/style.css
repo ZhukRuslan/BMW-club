@@ -239,7 +239,11 @@ p {
 /* Reviews */
 .reviews-title {
   margin-bottom: 60px;
+  /* padding-bottom: 0; */
 }
+/* .reviews-title.section {
+  padding-bottom: 0;
+} */
 .reviews-text {
   margin-bottom: 80px;
   font-size: 18px;
@@ -265,7 +269,8 @@ p {
 
 /* Registration */
 .regirt-cont {
-  width: 1100px;
+  margin: 0 30px;
+  background-color: #7bb6f2;
 }
 .registration-title {
   display: none;
@@ -277,6 +282,10 @@ p {
 .registration-text {
   font-size: 20px;
   line-height: 1.6;
+  margin-right: 160px;
+}
+.btn-block {
+  margin-right: 45px;
 }
 
 /* Footer  */
