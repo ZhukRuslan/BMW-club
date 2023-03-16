@@ -1,0 +1,239 @@
+:root {
+  --primary-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #1e90ff;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #f5f5f5;
+  --chaild-bg-color: #f7efef;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+
+  font-family: Montserrat, sans-serif;
+  letter-spacing: -0.015em;
+}
+/* унилита для сброса точек в списке, делается как клас и добавляется в тот ul где нужно */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+/* Section */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section-title {
+  color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+}
+.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.contaner {
+  width: 1600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  outline: 2px solid rebeccapurple;
+}
+
+/* Header */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  color: var(--title-text-color);
+
+  font-family: "Comfortaa", cursive;
+  font-size: 28px;
+  line-height: 1.14;
+  /* 1.14 получається line-height: 32px; треба поділити на font-size: 28px; */
+  text-decoration: none;
+}
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+
+/* Список Site-nav */
+.site-nav {
+  display: flex;
+  margin-left: 120px;
+}
+/* 1 варіант задавання відступів у всіх
+елементів флекс контейнера, крім останнього елемента */
+
+/* .site-nav .site-nav-item {
+  margin-right: 40px;
+}
+.site-nav .site-nav-item:last-child {
+  margin-right: 0;
+} */
+
+/* 2 варіант задавання відступів у всіх
+елементів флекс контейнера, крім останнього елемента */
+.site-nav .site-nav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* 3 варіант задавання (по селектору сусіда) відступів у всіх
+елементів флекс контейнера, крім останнього елемента */
+/* .site-nav .site-nav-item + .site-nav-item {
+  margin-left: 40px;
+} */
+.site-nav .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  color: var(--accent-color);
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+
+  text-decoration: none;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
+}
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .auth-nav-item + .auth-nav-item {
+  margin-left: 12px;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 11px 34px;
+  min-width: 160px;
+
+  color: var(--title-text-color);
+  background-color: var(--primary-background-color);
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.button.primary {
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
+}
+.button.secondary {
+  border-color: var(--accent-color);
+
+  color: var(--accent-color);
+  background-color: var(--primary-background-color);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+}
+.hero-title {
+  margin-bottom: 40px;
+
+  color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.42;
+}
+
+/* Fuature */
+.feat-title {
+  margin-bottom: 60px;
+}
+
+.feature-list .feature-title {
+  margin-bottom: 24px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.feature-list .text {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+/* Stamps */
+.section-title.own-title {
+  visibility: hidden;
+}
+.stamps-list > .stamps-item {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.stamps-list > .stamps-item:nth-child(2n) {
+  background-color: var(--chaild-bg-color);
+}
+.stamps-list .stamps-title {
+  margin-bottom: 20px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.stamps-list .stamps-text {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+/* Reviews */
+.reviews-title {
+  margin-bottom: 60px;
+}
+.reviews-text {
+  margin-bottom: 80px;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+}
+
+/* Registration */
+.registration-title {
+  visibility: hidden;
+}
+.registration-text {
+  margin-bottom: 80px;
+  font-size: 20px;
+  line-height: 1.6;
+
+  background-color: aquamarine;
+}
+
+/* Footer  */
