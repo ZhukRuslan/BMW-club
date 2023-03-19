@@ -279,7 +279,7 @@ p {
 .regirt-cont {
   padding-top: 80px;
   padding-bottom: 80px;
-  margin: 0 30px;
+  margin: 0;
 
   background-color: var(--color-line);
 }
